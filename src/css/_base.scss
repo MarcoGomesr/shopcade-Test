@@ -1,0 +1,37 @@
+$bg--general: #f6f7f8;
+$bg--content: #fff;
+$color__black: black;
+$color__red: #f16364;
+$color__mainbtn: #ed1844;
+
+body{
+	background: $bg--general;
+	font-family: 'Arimo', sans-serif;
+}
+
+a{
+	color: $color__black;
+	&:hover{
+		color: $color__black;
+		text-decoration: none; 
+	}
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+.indicator{
+	font-size: 8pt;
+}
+
+
+.navbar-collapse.collapse{
+	padding: 0;
+}
+
+
+.content{
+	padding-top: 110px;
+	background:	$bg--content;
+}

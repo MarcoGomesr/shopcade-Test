@@ -1,0 +1,207 @@
+doctype html
+html(lang='en')
+  head
+    title Jade
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==", crossorigin="anonymous")
+    link(href="https://fonts.googleapis.com/css?family=Arimo:400,700|PT+Sans", rel="stylesheet", type="text/css")    
+    link(rel="stylesheet", href="css/style.min.css")
+  body
+    header
+      .container
+        .row
+          .col-md-3
+            a(href="#",class="logo")
+              h1.logo__title shopcade
+          .col-md-3.col-md-offset-6
+            
+            ul.list-inline.auth              
+              li
+                span.ic-flag.auth__flag.auth__line
+              li
+                a(href="#")
+                  span.ic-cart.auth__cart
+              li
+                a(href="#", class="auth__register") register
+              li
+                a(href="#", class="auth__login") log in
+    
+    nav.navbar-inverse
+      .container
+        .navbar-header
+          button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#bs-example-navbar-collapse-9", aria-expanded="false")
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar                      
+
+          //- a(href="#",class="navbar-brand") Brand
+          div.collapse.navbar-collapse#bs-example-navbar-collapse-9
+            ul.nav.navbar-nav
+              li.navbar-nav__item.navbar-nav__item--first
+                a(href="#") Trending
+              li.navbar-nav__item
+                a(href="#") celebs
+              li.navbar-nav__item.navbar-nav__item--last
+                a(href="#") fashion
+
+        .col-sm-2.col-md-2.pull-right.hidden-xs
+          form.navbar-form(role='search')
+            .input-group
+              input(type='text', placeholder="Search")                  
+
+    
+    .container.content      
+      .row
+        .col-md-11.col-md-offset-1
+          ol.breadcrumb
+            li
+              a(href="#", class="breadcrumb__text") Fashion
+              a(href="#", class="breadcrumb__text") Women
+              a(href="#", class="breadcrumb__text") Dress
+              a(href="#", class="breadcrumb__text breadcrumb__text--active") Anthea Cut Out Dress
+
+        .col-md-6.col-md-offset-1
+          section.slider
+            .row
+              .col-md-2.col-xs-2
+                #carousel-example-generic.carousel.slide(data-ride='carousel', data-interval='false')              
+                
+                  // Thumbnails
+                  ul.thumbnails-carousel.hidden-xs
+                    li.thumbnails-carousel__item
+                      img(src='img/thumbails.png', alt='thumb')
+                    li.thumbnails-carousel__item
+                      img(src='img/thumbails1.png',alt='thumb 1')
+                    li.thumbnails-carousel__item
+                      img(src='img/thumbails2.png',alt='thumb 2')
+                    li.thumbnails-carousel__item
+                      img(src='img/thumbails.png', alt='thumb')
+                    li.thumbnails-carousel__item
+                      img(src='img/thumbails3.png',alt='thumb 3')
+                    li.thumbnails-carousel__item
+                      a(href="#", class="thumbnails-carousel__next") next
+
+              .col-md-10.col-xs-10
+                // Wrapper for slides
+                .carousel-inner
+                  .item.active.srle
+                    figure
+                      img.img-responsive(src='img/slider.png', alt='thumb 1 ')
+                    
+                      figcaption
+                        span Tags
+                        |: #missguided #dress #pink #long #black #missguided #dress #pink #long #black 
+                      
+                      ul.list-inline.social
+                        li
+                          a(href="#", class="ic_fb")
+                        li
+                          a(href="#", class="ic_tw")
+                        li
+                          a(href="#", class="ic_pt")
+                        li
+                          a(href="#", class="ic_gp")
+
+                  .item
+                    img.img-responsive(src='http://s29.postimg.org/xaf064313/image.jpg', alt='2.jpg')
+                    .carousel-caption
+                      p  2.jpg 
+                  .item
+                    img.img-responsive(src='http://s17.postimg.org/sv1x15jlb/image.jpg', alt='3.jpg')
+                    .carousel-caption
+                      p  3.jpg 
+                  .item
+                    img.img-responsive(src='http://s7.postimg.org/4z602gd8b/image.jpg', alt='4.jpg')
+                    .carousel-caption
+                      p  4.jpg 
+
+
+        .col-md-4
+          aside.description
+            h2.description__item Anthea Cut Out Dress
+            p.description__author by Missguided
+            
+            .row              
+              .col-md-6.description__price
+                £ 36.00
+              .col-md-6.description__rate
+                img(src="img/ic_start_yellow.png", alt="")
+                img(src="img/ic_start_yellow.png", alt="")
+                img(src="img/ic_start_yellow.png", alt="")
+                img(src="img/ic_start_yellow.png", alt="")
+                img(src="img/ic_start_gray.png", alt="")
+
+            hr
+
+            h3 colours:
+            p.description__square
+            p
+              h3 size:
+
+            p
+              span.description__size
+                |4
+              span.description__size
+                |6
+              span.description__size--active
+                |8
+              span.description__size
+                |10
+              span.description__size--active
+                |12
+              span.description__size--active
+                |14
+            
+            small
+              |View size guide
+
+  
+            button(type="button", class="mainbtn")
+              | ADD TO CART
+                
+            button(type="button", class="lkbtn")
+              | I LIKE IT
+            p.description__required
+              |* please select a size
+            
+
+            #accordion.panel-group.description__accordion(role='tablist', aria-multiselectable='true')
+              .panel.panel-default.first
+                #headingOne(role='tab')
+                  h4.panel-title.first
+                    a(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                      | Description
+                    span(class="indicator glyphicon glyphicon-minus  pull-right")
+                #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+                  .panel-body
+                    p
+                      | Bringing a touch of pastel perfection to your wardrobe, this elegant nude floaty maxi is a fabulous choice for your big events this season. Perennially sexy and red carpet inspired, all this beautiful gown needs
+                    p  
+                      | Bringing a touch of pastel perfection to your wardrobe, this elegant nude floaty maxi is a fabulous choice for your big events this season. Perennially sexy and red carpet inspired, all this beautiful gown needs is a pair of your highest heels and plenty of red lipstick for a drop dead gorgeous look. Fully lined Approx length 157cm/62” (Based on a UK size 8 sample) 95% Polyester 5% Cotton
+
+              .panel.panel-default
+                #headingTwo.panel-heading(role='tab')
+                  h4.panel-title
+                    a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                      | Delivery & Returns
+                    span(class="ic_plus pull-right")
+                #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+                  .panel-body
+                    | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              .panel.panel-default
+                #headingThree.panel-heading(role='tab')
+                  h4.panel-title
+                    a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                      | Activity
+                    span(class="ic_plus pull-right")
+                #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+                  .panel-body
+                    | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+            
+
+
